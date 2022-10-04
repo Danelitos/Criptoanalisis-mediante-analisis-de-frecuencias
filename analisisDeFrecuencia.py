@@ -51,7 +51,7 @@ print("\nQuieres ajustar el mensaje? (yes/no)")
 ajustarMensaje=input()
 if ajustarMensaje=="yes":
     terminar="true"
-    for terminar="yes":
+    for terminar=="yes":
         print("\n############### AJUSTAR MENSAJE ###############")
         #|A|B|C|D|E|F|G|H|I|J|K|L|M|N|Ñ|O|P|Q|R|S|T|U|V|W|X|Y|Z|
         #|D|K|I|P|A|X|J|T|O|N|R|Z|H|S|Ñ|F|M|B|C|Q|L|G|Y|W|E|V|U|
