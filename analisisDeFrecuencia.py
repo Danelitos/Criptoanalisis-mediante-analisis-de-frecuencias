@@ -50,16 +50,20 @@ print(mensajeDescifrado)
 print("\nQuieres ajustar el mensaje? (yes/no)")
 ajustarMensaje=input()
 if ajustarMensaje=="yes":
-    print("\n############### AJUSTAR MENSAJE ###############")
-    #|A|B|C|D|E|F|G|H|I|J|K|L|M|N|Ñ|O|P|Q|R|S|T|U|V|W|X|Y|Z|
-    #|D|K|I|P|A|X|J|T|O|N|R|Z|H|S|Ñ|F|M|B|C|Q|L|G|Y|W|E|V|U|
-    #DKIPAXJTONRZHSÑFMBCQLGYWEVU
+    terminar="true"
+    for terminar="yes":
+        print("\n############### AJUSTAR MENSAJE ###############")
+        #|A|B|C|D|E|F|G|H|I|J|K|L|M|N|Ñ|O|P|Q|R|S|T|U|V|W|X|Y|Z|
+        #|D|K|I|P|A|X|J|T|O|N|R|Z|H|S|Ñ|F|M|B|C|Q|L|G|Y|W|E|V|U|
+        #DKIPAXJTONRZHSÑFMBCQLGYWEVU
 
-    listaLetrasAjustadas=input()
-    mensajeDescifrado = mensaje.maketrans(alfabeto,listaLetrasAjustadas)
-    mensajeDescifrado=mensaje.translate(mensajeDescifrado)
-    print("\n############### MENSAJE DESCIFRADO ###############")
-    print(mensajeDescifrado)
+        listaLetrasAjustadas=input()
+        mensajeDescifrado = mensaje.maketrans(alfabeto,listaLetrasAjustadas)
+        mensajeDescifrado=mensaje.translate(mensajeDescifrado)
+        print("\n############### MENSAJE DESCIFRADO ###############")
+        print(mensajeDescifrado)
+        print("\nQuieres seguir ajustando el mensaje? (yes/no)")
+        terminar=input()
 
 
 
