@@ -24,7 +24,7 @@ for caracter in alfabeto:
 
 #Ordena la listaLetras de mayor a menos frecuencia
 listaOrdenada = sorted(listaLetras.items(), key=lambda x: x[1], reverse=True)
-print(listaOrdenada)
+print("\n"listaOrdenada)
 
 #Letras de mayor frecuencia a menor frecuencia juntas en un mismo string
 for i in range(len(listaOrdenada)):
@@ -33,23 +33,23 @@ for i in range(len(listaOrdenada)):
 #Intercambiamos letras en el mensaje cifrado
 mensajeDescifrado = mensaje.maketrans(listaCaracteresOrdenada, frecuencia)
 
-print("############### MENSAJE CIFRADO ###############")
+print("\n############### MENSAJE CIFRADO ###############")
 print(mensaje)
 
-print("############### CARACTERES ORDENADOS DE MAYOR FRECUENCIA A MENOS ###############")
+print("\n############### CARACTERES ORDENADOS DE MAYOR FRECUENCIA A MENOS ###############")
 print(listaCaracteresOrdenada)
 
-print("############### FRECUENCIAS ###############")
+print("\n############### FRECUENCIAS ###############")
 print(frecuencia)
 
-print("############### MENSAJE DESCIFRADO ###############")
+print("\n############### MENSAJE DESCIFRADO ###############")
 mensajeDescifrado=mensaje.translate(mensajeDescifrado)
 print(mensajeDescifrado)
 
-print("Quieres ajustar el mensaje? (yes/no)")
+print("\nQuieres ajustar el mensaje? (yes/no)")
 ajustarMensaje=input()
 if ajustarMensaje=="yes":
-    print("############### AJUSTAR MENSAJE ###############")
+    print("\n############### AJUSTAR MENSAJE ###############")
     #|A|B|C|D|E|F|G|H|I|J|K|L|M|N|Ñ|O|P|Q|R|S|T|U|V|W|X|Y|Z|
     #|D|K|I|P|A|X|J|T|O|N|R|Z|H|S|Ñ|F|M|B|C|Q|L|G|Y|W|E|V|U|
     #DKIPAXJTONRZHSÑFMBCQLGYWEVU
@@ -57,7 +57,7 @@ if ajustarMensaje=="yes":
     listaLetrasAjustadas=input()
     mensajeDescifrado = mensaje.maketrans(alfabeto,listaLetrasAjustadas)
     mensajeDescifrado=mensaje.translate(mensajeDescifrado)
-    print("############### MENSAJE DESCIFRADO ###############")
+    print("\n############### MENSAJE DESCIFRADO ###############")
     print(mensajeDescifrado)
 
 
