@@ -24,7 +24,8 @@ for caracter in alfabeto:
 
 #Ordena la listaLetras de mayor a menos frecuencia
 listaOrdenada = sorted(listaLetras.items(), key=lambda x: x[1], reverse=True)
-print("\n"listaOrdenada)
+print("")
+print(listaOrdenada)
 
 #Letras de mayor frecuencia a menor frecuencia juntas en un mismo string
 for i in range(len(listaOrdenada)):
