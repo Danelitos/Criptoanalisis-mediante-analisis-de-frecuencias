@@ -54,7 +54,7 @@ if(ajustarMensaje=="yes"){
     #|D|K|I|P|A|X|J|T|O|N|R|Z|H|S|Ñ|F|M|B|C|Q|L|G|Y|W|E|V|U|
     #DKIPAXJTONRZHSÑFMBCQLGYWEVU
 
-    listaLetrasAjustadas=input();
+    listaLetrasAjustadas=input()
     mensajeDescifrado = mensaje.maketrans(alfabeto,listaLetrasAjustadas)
     mensajeDescifrado=mensaje.translate(mensajeDescifrado)
     print("############### MENSAJE DESCIFRADO ###############")
