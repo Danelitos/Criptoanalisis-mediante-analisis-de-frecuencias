@@ -3,7 +3,8 @@
 
 from collections import Counter
 
-alfabeto="ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+alfabetoMayus="ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+alfabetoMinus="abcdefghijklmnñopqrstuvwxyz"
 
 #Frecuencia de aparición de letras
 frecuencia="EAOLSNDRUITCPMYQBHGFVJÑZXKW"
@@ -13,13 +14,14 @@ listaCaracteresOrdenada=""
 
 print("Escribe el mensaje que quieres descrifrar:")
 mensaje=input()
-
+mensajeTodoMayus=mensaje.maketrans(alfabetoMinus, alfabetoMayus)
+mensajeTodoMayus=mensaje.translate(mensajeTodoMayus)
 #Para contar la letras del mensaje cifrado
-counter=Counter(mensaje)
+counter=Counter(mensajeTodoMayus)
 
 listaLetras= {}
 
-for caracter in alfabeto:
+for caracter in alfabetoMayus:
     listaLetras[caracter]=counter[caracter]
 
 #Ordena la listaLetras de mayor a menos frecuencia
@@ -32,10 +34,10 @@ for i in range(len(listaOrdenada)):
     listaCaracteresOrdenada= listaCaracteresOrdenada + listaOrdenada[i][0]
 
 #Intercambiamos letras en el mensaje cifrado
-mensajeDescifrado = mensaje.maketrans(listaCaracteresOrdenada, frecuencia)
+mensajeDescifrado = mensajeTodoMayus.maketrans(listaCaracteresOrdenada, frecuencia)
 
 print("\n############### MENSAJE CIFRADO ###############")
-print(mensaje)
+print(mensajeTodoMayus)
 
 print("\n############### CARACTERES ORDENADOS DE MAYOR FRECUENCIA A MENOS ###############")
 print(listaCaracteresOrdenada)
@@ -44,7 +46,7 @@ print("\n############### FRECUENCIAS ###############")
 print(frecuencia)
 
 print("\n############### MENSAJE DESCIFRADO ###############")
-mensajeDescifrado=mensaje.translate(mensajeDescifrado)
+mensajeDescifrado=mensajeTodoMayus.translate(mensajeDescifrado)
 print(mensajeDescifrado)
 
 print("\nQuieres ajustar el mensaje? (yes/no)")
@@ -58,8 +60,8 @@ if ajustarMensaje=="yes":
         #DKIPAXJTONRZHSÑFMBCQLGYWEVU
 
         listaLetrasAjustadas=input()
-        mensajeDescifrado = mensaje.maketrans(alfabeto,listaLetrasAjustadas)
-        mensajeDescifrado=mensaje.translate(mensajeDescifrado)
+        mensajeDescifrado = mensajeTodoMayus.maketrans(alfabetoMayus,listaLetrasAjustadas)
+        mensajeDescifrado=mensajeTodoMayus.translate(mensajeDescifrado)
         print("\n############### MENSAJE DESCIFRADO ###############")
         print(mensajeDescifrado)
         print("\nQuieres seguir ajustando el mensaje? (yes/no)")
