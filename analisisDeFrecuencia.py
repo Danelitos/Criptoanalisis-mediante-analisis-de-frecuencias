@@ -14,8 +14,11 @@ listaCaracteresOrdenada=""
 
 print("Escribe el mensaje que quieres descrifrar:")
 mensaje=input()
+
+#Si el mensaje que recibimos esta en minusculas, lo pasa todo a mayusculas
 mensajeTodoMayus=mensaje.maketrans(alfabetoMinus, alfabetoMayus)
 mensajeTodoMayus=mensaje.translate(mensajeTodoMayus)
+
 #Para contar la letras del mensaje cifrado
 counter=Counter(mensajeTodoMayus)
 
